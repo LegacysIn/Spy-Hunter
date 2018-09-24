@@ -1,3 +1,7 @@
+//const user = require('./user');
+//const chat = require('./chat');
+const serverTime = require('./serverTime');
+
 const express = require('express');
 const apps = express();
 
@@ -6,7 +10,7 @@ const io = require('socket.io').listen(server);
 
 apps.set('port', process.env.PORT || 3000);
 
-io.on('connect', function (socket) {
+io.on('connection', function (socket) {
 
 });
 
